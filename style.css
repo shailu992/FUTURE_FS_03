@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f0f0f;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR - Glass Effect */
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    background: rgba(0,0,0,0.4);
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 22px;
+    color: #ffb74d;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffb74d;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+    url('https://images.unsplash.com/photo-1509042239860-f550ce710b93');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 60px;
+    animation: fadeIn 2s ease forwards;
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 35px;
+    background: linear-gradient(45deg, #ff9800, #ff5722);
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* SECTIONS */
+.section {
+    padding: 100px 10%;
+    text-align: center;
+}
+.price {
+    margin-top: 10px;
+    font-weight: 600;
+    color: #ff9800;
+    font-size: 18px;
+}
+
+.badge {
+    background: linear-gradient(45deg, #ff9800, #ff5722);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+.menu-item h3 {
+    margin-top: 10px;
+}
+
+.menu-item p {
+    opacity: 0.8;
+}
+
+/* Glow hover effect */
+.menu-item:hover {
+    box-shadow: 0 0 20px rgba(255,152,0,0.6);
+}
+
+/* GLASS CARD */
+.glass-card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 30px;
+    transition: 0.4s;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+
+.glass-card:hover {
+    transform: translateY(-10px);
+}
+
+/* MENU GRID */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.menu-item img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+/* GALLERY */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Gallery Section Centering */
+#gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 140px;   /* space below fixed navbar */
+}
+
+/* Space between heading and images */
+#gallery h2 {
+    margin-bottom: 50px;
+    font-size: 32px;
+}
+
+/* Center images container */
+.gallery-grid {
+    width: 100%;
+    max-width: 1100px;
+}
+
+
+/* CONTACT */
+.contact-box {
+    width: 600px;
+    margin: auto;
+    
+    text-align: center;
+}
+
+
+.contact-item {
+    margin-bottom: 25px;
+}
+
+.contact-item h3 {
+    font-size: 18px;
+    color: #ffb74d;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    opacity: 0.8;
+    font-size: 15px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #000;
+    margin-top: auto;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .nav-links {
+        display: none;
+    }
+    .hero h1 {
+        font-size: 40px;
+    }
+}
